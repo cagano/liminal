@@ -32,6 +32,7 @@ Categories: `pattern` (reusable approach), `pitfall` (avoid this), `defensive` (
 
 | Hash | Message | Date |
 |------|---------|------|
+| `516d542` | fix: checkpoint.py UTF-8 stdout encoding + SCRATCHPAD pitfall logged | 2026-03-05 |
 | `cade1e3` | rename: Merovingian to The Liminal, Architect to Cartographer | 2026-03-05 |
 | `ab65bb4` | rename: Merovingian → The Liminal, Architect → Cartographer | 2026-03-05 |
 | `78ee8d8` | init: system initialized — identity set, knowledge files created, workflows defined, GTD populated, schedule active | 2026-03-05 |
