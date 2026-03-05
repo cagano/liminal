@@ -10,7 +10,7 @@ conversation that got compressed.
 
 | Date | Exploration | Fork | Chosen | Deferred | Reasoning |
 |------|------------|------|--------|----------|-----------|
-| — | — | — | — | — | — |
+| 2026-03-05 | liminal-framework | What is the core selection logic for the compounding stack? | Multi-dimensional leverage at low entry cost (4-test filter) | Single-dimension filtering, cost-only filtering | User articulated directly from lived experience; treadmill desk as canonical example |
 
 ---
 

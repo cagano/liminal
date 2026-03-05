@@ -35,3 +35,4 @@ Only `approved` files may be cited as authoritative sources. `draft` and `review
 | tool-conventions | Tool Development Conventions | approved | `knowledge/tool-conventions.md` | Script standards: argparse CLI, YAML errors to stderr, exit codes 0/1/2, line-by-line Markdown parsing, composability |
 | platform-portability | Platform Portability Guide | draft | `knowledge/platform-portability.md` | [NOT YET CREATED] How to adapt the framework for Claude Code, Cursor, Windsurf, Gemini/Antigravity |
 | glossary | Glossary | draft | `knowledge/glossary.md` | [NOT YET CREATED] Domain-specific terms: crystallization, confidence tiers, safety tiers, checkpoint, exploration, etc. |
+| stack-selection | Stack Selection Criteria | approved | `knowledge/stack-selection.md` | Filter for stack-eligible ideas: cost gate, dimension count, stack fit, permanence. Includes current stack map and Pareto ingestion rule. |
