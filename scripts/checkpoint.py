@@ -1,5 +1,5 @@
 """
-checkpoint.py — Git checkpoint utility for Merovingian Agent
+checkpoint.py — Git checkpoint utility for The Liminal
 =============================================================
 Creates a git commit and safely updates the Checkpoints table in SCRATCHPAD.md.
 

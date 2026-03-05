@@ -1,6 +1,6 @@
 # Initialization Prompts
 
-These prompts scaffold a new Merovingian Agent workspace. Use them in order.
+These prompts scaffold a new Liminal agent workspace. Use them in order.
 
 ## Usage
 

@@ -12,7 +12,7 @@ waiting_on: (blockers, if any)
 
 ---
 
-## Merovingian Framework v1
+## Liminal Framework v1
 outcome: Complete, documented, tested framework that can scaffold agents in any domain
 next_action: Create the two remaining knowledge files (platform-portability, glossary)
 waiting_on: nothing

@@ -11,7 +11,7 @@ last_updated: 2026-03-05
 
 # Exploration Patterns
 
-Techniques for divergent ideation within the Merovingian framework. These patterns are used
+Techniques for divergent ideation within the Liminal framework. These patterns are used
 when working with `.agents/explorations/` files and governed by the Explorer's Protocol.
 
 ## 1. Problem Framing

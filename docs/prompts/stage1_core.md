@@ -1,6 +1,6 @@
 # Stage 1: Core Architecture
 
-You are setting up a "Merovingian Agent" workspace — a Chat-Native Agent where the conversation
+You are setting up a "Liminal" agent workspace — a Chat-Native Agent where the conversation
 itself is the primary interface, backed by a 5-layer file architecture: Identity, Knowledge,
 Tools, Workflows, and State.
 

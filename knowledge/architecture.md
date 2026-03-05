@@ -11,7 +11,7 @@ last_updated: 2026-03-05
 
 # 5-Layer Architecture
 
-The Merovingian framework decomposes a Chat-Native Agent into five layers, each backed by files
+The Liminal framework decomposes a Chat-Native Agent into five layers, each backed by files
 on disk that the agent reads and writes during conversation.
 
 ## Layers

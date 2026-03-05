@@ -1,5 +1,5 @@
 """
-_template.py — Reference script for Merovingian Agent tools
+_template.py — Reference script for The Liminal tools
 ============================================================
 Demonstrates project standards for all scripts in this layer:
   - argparse CLI interface

@@ -1,5 +1,5 @@
 ---
-description: "Scaffold a new Merovingian Agent workspace from domain context"
+description: "Scaffold a new Liminal agent workspace from domain context"
 safety_tier_default: T2
 estimated_steps: 8
 ---
@@ -8,7 +8,7 @@ estimated_steps: 8
 
 ## Purpose
 
-Create a new, fully initialized Merovingian Agent workspace for a specific domain,
+Create a new, fully initialized Liminal agent workspace for a specific domain,
 using the two-stage prompt system stored in `docs/prompts/`.
 
 ## Prerequisites
