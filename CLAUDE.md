@@ -16,8 +16,8 @@ Every agent project uses this structure:
 
 ```
 project-root/
-├── AGENT.md                  # Layer 1: Identity — persona, critic's protocol, safety rules
-├── SCRATCHPAD.md             # Layer 5: State — command log, checkpoints, overflow flag
+├── AGENT.md                  # Layer 1: Identity — persona, protocols, safety rules
+├── SCRATCHPAD.md             # Layer 5: State — tool dev notes, checkpoints, overflow flag
 ├── HANDOFF.md                # Context recovery template for session handoffs
 ├── knowledge/
 │   └── INDEX.md              # Layer 2: Knowledge — domain file map with YAML frontmatter
@@ -26,12 +26,16 @@ project-root/
 │   ├── _template.py          # Layer 3: Tools — argparse, YAML errors, exit codes 0/1/2
 │   └── checkpoint.py         # Git commit + SCRATCHPAD update utility
 └── .agents/
+    ├── explorations/         # Divergent ideation — pre-workflow concept development
+    │   ├── _template.md
+    │   └── DECISIONS.md
     └── workflows/
         ├── _template.md      # Layer 4: Workflows — step sequences with tier annotations
         └── [domain].md
 ```
 
 Optional extensions activate when needed:
+- `.agents/explorations/` — divergent ideation layer with Explorer's Protocol, assumption tracking, and crystallization into knowledge/workflows
 - `gtd/` — multi-session task tracking (INBOX → NEXT → PROJECTS → WAITING → DONE)
 - `.agents/schedule/` — recurring task registry + session hooks (declaration only, not a real scheduler)
 
@@ -47,13 +51,35 @@ All workflow steps are annotated. Respect these at all times:
 
 Never auto-execute T3.
 
+### Dual Protocols
+
+The framework has two internal evaluation protocols, each governing a different mode of work:
+
+- **Critic's Protocol** (7 items) — governs convergent execution: knowledge files, scripts, workflows. Checks for correctness, traceability, and methodology.
+- **Explorer's Protocol** (7 items) — governs divergent ideation: explorations, problem frames, directions. Checks for breadth, assumption surfacing, and genuine alternatives.
+
+When crystallizing an exploration into execution artifacts, both protocols apply.
+
+### Confidence Tiers
+
+Used in explorations and early-stage knowledge to signal epistemic status:
+
+| Tier | Tag | Meaning |
+|------|-----|---------|
+| C1 | `[SPECULATIVE]` | Generated possibility — no evidence yet |
+| C2 | `[GROUNDED]` | Supported by evidence or domain knowledge — not yet validated |
+| C3 | `[VALIDATED]` | Tested, confirmed, or demonstrated |
+
+Claims promoted to `knowledge/` must be at least `[GROUNDED]`.
+
 ### Key Behaviors from AGENT.md
 
 Every agent project defines these rules in its own `AGENT.md`. When working inside a project, read `AGENT.md` first. The universal rules are:
 
 1. **Knowledge-first:** Prioritize `knowledge/` files over training knowledge. If `INDEX.md` references a file that doesn't exist on disk, say so — never fabricate it.
-2. **Critic's Protocol:** Before any output, internally check: correct methodology applied? claims sourced? facts separated from assessments? SCRATCHPAD checked for prior failures?
-3. **SCRATCHPAD discipline:** Read before running any command. Update after.
+2. **Critic's Protocol:** Before execution output, internally check: correct methodology applied? claims sourced? facts separated from assessments? SCRATCHPAD checked?
+3. **Explorer's Protocol:** Before narrowing in ideation, internally check: multiple frames generated? assumptions surfaced? trade-offs explicit? directions genuinely distinct?
+4. **SCRATCHPAD discipline:** Read before running any command. Log tool development insights after. Track what works for building system tools, not just what commands ran.
 
 ---
 

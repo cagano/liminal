@@ -25,19 +25,28 @@ Include these sections:
 - Core Directives: knowledge-first rule (missing files → state explicitly, never fabricate),
   data integrity (derive = show derivation, estimate = label [ESTIMATE]), YAML + ISO 8601
   serialization, SCRATCHPAD discipline (read before, update after)
-- Critic's Protocol: 7-item checklist (correct methodology, sourced claims, facts vs judgments,
-  terminology consistency, audience quality bar, SCRATCHPAD checked, reasoning shown)
+- Critic's Protocol: 7-item checklist for convergent execution (correct methodology,
+  sourced claims, facts vs judgments, terminology consistency, audience quality bar,
+  SCRATCHPAD checked, reasoning shown)
+- Explorer's Protocol: 7-item checklist for divergent ideation (multiple problem frames,
+  transformation lenses applied, assumptions surfaced, directions genuinely distinct,
+  trade-offs explicit, stress-tested, forks recorded)
+- Confidence Tiers: C1 [SPECULATIVE], C2 [GROUNDED], C3 [VALIDATED] — label all
+  exploration claims; knowledge/ files must be at least [GROUNDED]
 - Safety Tiers: T1 [AUTO] read-only, T2 [CONFIRM] local writes, T3 [EXPLICIT] external/irreversible
-- File Structure diagram showing the 5 layers
+- File Structure diagram showing the 5 layers plus explorations
 - Session hooks: on_session_start (read state files, process INBOX if GTD active, check SCHEDULE
   if scheduling active) and on_session_end (update SCRATCHPAD, set overflow flag, write HANDOFF
   if needed, checkpoint)
 
 **2. `SCRATCHPAD.md` (State Layer)**
 
-Header: "Operational state log. Check before running any command. Update after."
+Header: "Operational state and tool development notes. Check before running any command. Update after."
 
 Sections:
+- `## Tool Development Log` — table: [Date, Tool/Script, Insight, Category].
+  Categories: pattern, pitfall, defensive, convention. This is where the agent records
+  what works and what doesn't when building new scripts for the system.
 - `## Command Log` — table: [timestamp, command, result, notes]
 - `## Checkpoints` — table: [Hash, Message, Date] with one placeholder row for "scaffold init"
 - `## Context Overflow` — YAML block: `context_overflow: false`
@@ -62,6 +71,26 @@ Last Checkpoint (git hash + restore command), Open Questions, Next Session Shoul
 YAML frontmatter: `description`, `safety_tier_default`, `estimated_steps`
 Sections: Purpose, Prerequisites, Steps (numbered, each annotated [AUTO]/[CONFIRM]/[EXPLICIT]),
 Validation checklist, Rollback instructions.
+
+**6. `.agents/explorations/_template.md` (Exploration Template)**
+
+YAML frontmatter: `seed`, `status` (open|crystallizing|archived), `started`, `last_touched`,
+`crystallized_to` (list of files this produced)
+
+Sections:
+- Seed (original idea, quoted verbatim)
+- Problem Frames (table: #, Frame, Core tension, Who feels it most — minimum 3 rows)
+- Assumptions (table: #, Assumption, Challenge, Status — values: UNTESTED/CONFIRMED/REJECTED/REFRAMED)
+- Transformations (subsections: Inversion, Analogy Transfer, Constraint Shift, Adjacent Possible)
+- Directions (A/B/C minimum — each with: mental model, enables, forecloses, confidence tier)
+- Stress Test (core assumption wrong, wild success problems, three most likely disappointments)
+- Forks & Decisions (table: #, Fork, Chosen, Deferred, Reasoning)
+- Crystallization (checklist: problem frame → knowledge/, direction → knowledge/, workflow → workflows/, untested assumptions → gtd/NEXT.md)
+
+**7. `.agents/explorations/DECISIONS.md`**
+
+Cross-exploration decision log. Table: [Date, Exploration, Fork, Chosen, Deferred, Reasoning].
+Append-only — never edit past decisions, add a new row if revisiting.
 
 ---
 
