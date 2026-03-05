@@ -16,6 +16,7 @@ Operational state log. Check before running any command. Update after.
 
 | Hash | Message | Date |
 |------|---------|------|
+| `a31cb17` | scaffold: merovingian agent framework — all phases complete | 2026-03-05 |
 | — | scaffold init | — |
 
 ---

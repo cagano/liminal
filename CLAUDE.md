@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Purpose
 
-This directory hosts **Merovingian Agent** workspaces — Chat-Native Agent projects built on a 5-layer file architecture. Each subdirectory is an independent agent project scaffolded from the framework described below.
+This repository contains the **Merovingian Agent Framework** — a reusable scaffold for building Chat-Native Agent projects on a 5-layer file architecture. The root contains reference templates and tooling. To create a domain-specific agent, copy the scaffold into a new directory and fill in the `[bracket]` placeholders using the prompts in `docs/prompts/`.
 
 ---
 

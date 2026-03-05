@@ -72,7 +72,7 @@ project-root/
 **On session start:**
 1. `[AUTO]` Read `AGENT.md`, `SCRATCHPAD.md`, `HANDOFF.md`
 2. `[AUTO]` Check `SCRATCHPAD.md → Context Overflow` — if `true`, summarize `HANDOFF.md` to user
-3. `[AUTO]` If GTD extension active: process `gtd/INBOX.md`
+3. `[AUTO]` If GTD extension active: process `gtd/INBOX.md` — nothing stays in INBOX after processing
 4. `[AUTO]` If Schedule extension active: check `SCHEDULE.md` for overdue tasks, report before proceeding
 
 **On session end:**
@@ -80,3 +80,23 @@ project-root/
 2. `[CONFIRM]` Set `context_overflow: true` if approaching context limits
 3. `[CONFIRM]` Write `HANDOFF.md` if overflow flag is true
 4. `[CONFIRM]` Run `python scripts/checkpoint.py "session-end: [summary]"`
+
+---
+
+## GTD Behavior Rules
+
+When the GTD extension (`gtd/`) is active, follow these rules in addition to session hooks:
+
+- **Before starting new work:** consult `gtd/NEXT.md` and `gtd/PROJECTS.md`
+- **On task completion:** strike through the item and move it to `gtd/DONE.md` with a completion date
+- **Weekly (or on explicit request):** review `gtd/WAITING.md` and `gtd/SOMEDAY.md` for items that should be promoted to `gtd/NEXT.md`
+
+---
+
+## Schedule Behavior Rules
+
+When the Schedule extension (`.agents/schedule/`) is active:
+
+- When a scheduled task is due, announce it to the user and ask whether to run now or defer. Never silently skip a due task.
+- After running a scheduled task, update `last_run` and `next_run` in `SCHEDULE.md`, then checkpoint.
+- Disabled tasks (`enabled: false`) are never run but remain in the registry for future reactivation.

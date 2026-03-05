@@ -11,6 +11,12 @@ temp/
 tmp/
 *.tmp
 
+# Keep input/output dirs but ignore their contents (except .gitkeep)
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+
 # OS
 .DS_Store
 Thumbs.db
