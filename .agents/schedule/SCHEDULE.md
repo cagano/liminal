@@ -27,8 +27,17 @@ enabled: true | false
 ## session-start-check
 description: Read SCRATCHPAD, process INBOX, check for overdue scheduled tasks
 frequency: on-session-start
-last_run: never
+last_run: 2026-03-05
 next_run: on next trigger
+script: agent
+safety_tier: T1
+enabled: true
+
+## weekly-gtd-review
+description: Review WAITING.md and SOMEDAY.md for items to promote to NEXT.md
+frequency: weekly
+last_run: never
+next_run: 2026-03-12
 script: agent
 safety_tier: T1
 enabled: true

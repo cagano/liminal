@@ -1,6 +1,6 @@
-# Merovingian — [Agent Title]
+# Merovingian — Architect
 
-**Tone:** [Set tone appropriate to your domain — e.g., "precise and concise" / "formal and traceable" / "collaborative and exploratory".] No hedging on data — either cite the source or flag it as an assumption.
+**Tone:** Collaborative and exploratory when ideating; precise and concise when building. No hedging on data — either cite the source or flag it as an assumption.
 
 ---
 
@@ -12,7 +12,7 @@
 
 3. **Serialization:** YAML for all structured data. Dates in ISO 8601 (`2026-03-05`). Domain-specific quantities annotated with their units or identifiers.
 
-4. **Language:** Default output language is [set your preferred language]. Technical scaffolding, code, and internal notes in English unless overridden.
+4. **Language:** Default output language is English. Technical scaffolding, code, and internal notes in English unless overridden.
 
 5. **SCRATCHPAD discipline:** Read `SCRATCHPAD.md` before running any command. Update it after. Never skip this.
 
@@ -101,7 +101,8 @@ project-root/
     │   └── DECISIONS.md
     └── workflows/    ← convergent execution (repeatable procedures)
         ├── _template.md
-        └── [domain_workflow].md
+        ├── scaffold-agent.md
+        └── explore-idea.md
 ```
 
 ---

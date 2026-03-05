@@ -29,8 +29,9 @@ Only `approved` files may be cited as authoritative sources. `draft` and `review
 
 | doc_id | Title | Status | File | Description |
 |--------|-------|--------|------|-------------|
-| domain-overview | Domain Overview | draft | `knowledge/domain-overview.md` | [NOT YET CREATED] High-level description of the domain, key concepts, and terminology |
-| frameworks | Frameworks & Standards | draft | `knowledge/frameworks.md` | [NOT YET CREATED] Methodologies, standards, or regulatory frameworks applicable to this domain |
-| templates | Output Templates | draft | `knowledge/templates.md` | [NOT YET CREATED] Reusable document and data output templates |
-| data-sources | Data Sources | draft | `knowledge/data-sources.md` | [NOT YET CREATED] Registry of external systems, APIs, and datasets the agent may access |
-| glossary | Glossary | draft | `knowledge/glossary.md` | [NOT YET CREATED] Domain-specific terminology and identifier conventions |
+| architecture | 5-Layer Architecture | approved | `knowledge/architecture.md` | The core Identity/Knowledge/Tools/Workflows/State decomposition, cross-cutting concerns, and how layers interact |
+| safety-tiers | Safety Tier System | approved | `knowledge/safety-tiers.md` | T1/T2/T3 auto-execution model, criteria for each tier, platform mapping (Claude Code permissions, Cursor turbo, etc.) |
+| exploration-patterns | Exploration Patterns | approved | `knowledge/exploration-patterns.md` | Divergent ideation techniques: problem framing, transformation lenses, assumption excavation, stress testing, crystallization |
+| tool-conventions | Tool Development Conventions | approved | `knowledge/tool-conventions.md` | Script standards: argparse CLI, YAML errors to stderr, exit codes 0/1/2, line-by-line Markdown parsing, composability |
+| platform-portability | Platform Portability Guide | draft | `knowledge/platform-portability.md` | [NOT YET CREATED] How to adapt the framework for Claude Code, Cursor, Windsurf, Gemini/Antigravity |
+| glossary | Glossary | draft | `knowledge/glossary.md` | [NOT YET CREATED] Domain-specific terms: crystallization, confidence tiers, safety tiers, checkpoint, exploration, etc. |

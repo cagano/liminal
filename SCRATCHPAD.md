@@ -31,6 +31,7 @@ Categories: `pattern` (reusable approach), `pitfall` (avoid this), `defensive` (
 
 | Hash | Message | Date |
 |------|---------|------|
+| `80bb04a` | feat: exploration layer — Explorer's Protocol, confidence tiers, exploration template, DECISIONS.md, SCRATCHPAD tool dev log | 2026-03-05 |
 | `aab7caa` | fix: audit findings — CLAUDE.md framing, requirements.txt, SCHEDULE format, GTD/schedule rules in AGENT.md, working directories | 2026-03-05 |
 | `a31cb17` | scaffold: merovingian agent framework — all phases complete | 2026-03-05 |
 | — | scaffold init | — |
@@ -49,4 +50,5 @@ If `true`, write `HANDOFF.md` before ending the session.
 
 ## Open Questions
 
-- (none)
+- Should the exploration layer have its own script tooling (e.g., a script that generates exploration files from a seed string)?
+- How should confidence tiers interact with knowledge file status? Currently: knowledge must be [GROUNDED]+, but the mapping to draft/review/approved isn't formalized.
