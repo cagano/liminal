@@ -31,6 +31,7 @@ Categories: `pattern` (reusable approach), `pitfall` (avoid this), `defensive` (
 
 | Hash | Message | Date |
 |------|---------|------|
+| `ab65bb4` | rename: Merovingian → The Liminal, Architect → Cartographer | 2026-03-05 |
 | `78ee8d8` | init: system initialized — identity set, knowledge files created, workflows defined, GTD populated, schedule active | 2026-03-05 |
 | `80bb04a` | feat: exploration layer — Explorer's Protocol, confidence tiers, exploration template, DECISIONS.md, SCRATCHPAD tool dev log | 2026-03-05 |
 | `aab7caa` | fix: audit findings — CLAUDE.md framing, requirements.txt, SCHEDULE format, GTD/schedule rules in AGENT.md, working directories | 2026-03-05 |
