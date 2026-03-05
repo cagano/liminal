@@ -14,6 +14,7 @@ Patterns, pitfalls, and hard-won lessons from programming tools in the scripts/ 
 | 2026-03-05 | checkpoint.py | Line-by-line table parsing is robust; regex substitution on full content is brittle against LLM-generated formatting variations | pattern |
 | 2026-03-05 | checkpoint.py | Always include a fallback (auto-recovery table) when parsing structured Markdown — the file may be hand-edited or malformed | defensive |
 | 2026-03-05 | _template.py | YAML error output to stderr + clean YAML to stdout keeps scripts composable in pipelines | pattern |
+| 2026-03-05 | checkpoint.py | Windows cp1252 console encoding crashes on non-ASCII chars (e.g. arrows, em-dashes) in commit messages passed via print(). Fix: reconfigure stdout to UTF-8 at script start. | pitfall |
 
 Categories: `pattern` (reusable approach), `pitfall` (avoid this), `defensive` (guard against this), `convention` (team/project standard)
 
@@ -31,6 +32,7 @@ Categories: `pattern` (reusable approach), `pitfall` (avoid this), `defensive` (
 
 | Hash | Message | Date |
 |------|---------|------|
+| `cade1e3` | rename: Merovingian to The Liminal, Architect to Cartographer | 2026-03-05 |
 | `ab65bb4` | rename: Merovingian → The Liminal, Architect → Cartographer | 2026-03-05 |
 | `78ee8d8` | init: system initialized — identity set, knowledge files created, workflows defined, GTD populated, schedule active | 2026-03-05 |
 | `80bb04a` | feat: exploration layer — Explorer's Protocol, confidence tiers, exploration template, DECISIONS.md, SCRATCHPAD tool dev log | 2026-03-05 |

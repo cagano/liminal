@@ -12,8 +12,15 @@ import argparse
 import subprocess
 import sys
 import re
+import io
 from datetime import datetime, timezone
 from pathlib import Path
+
+# Windows cp1252 consoles crash on non-ASCII characters — force UTF-8 throughout
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 SCRATCHPAD = Path("SCRATCHPAD.md")
 
